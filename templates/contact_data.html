@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    body{
+      background-color: rgba(127, 255, 212, 0.521);
+    }
+  </style>
+    <table>
+        <tr >
+            <th>Serial No</th> 
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone Number</th>
+            <th>Message</th>
+          </tr>
+          <tr>
+            {%for rec in all_rec:%}
+            <td style="border: 1px solid black;border-collapse: collapse;">{{rec.id}}</td>
+            <td style="border: 1px solid black;border-collapse: collapse;">{{rec.name}}</td>
+            <td style="border: 1px solid black;border-collapse: collapse;">{{rec.email}}</td>
+            <td style="border: 1px solid black;border-collapse: collapse;">{{rec.phone_number}}</td>
+            <td style="border: 1px solid black;border-collapse: collapse;">{{rec.message}}</td>
+          </tr>
+          {% endfor %}
+    </table>
+</body>
+</html>
